@@ -1,0 +1,36 @@
+.wrapper {
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: minmax(15px, auto) repeat(12, var(--app-width)) minmax(15px, auto); }
+  .wrapper > .inner {
+    display: grid;
+    grid-column: 2 / 14;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(12, 1fr); }
+
+*.bg-primary {
+  background: var(--color-primary); }
+
+*.bg-secondary {
+  background: var(--color-secondary); }
+
+*.bg-orange {
+  background: var(--color-orange); }
+
+*.bg-yellow {
+  background: var(--color-yellow); }
+
+*.bg-purple {
+  background: var(--color-purple); }
+
+*.bg-blue {
+  background: var(--color-blue); }
+
+*.bg-green {
+  background: var(--color-green); }
+
+*.bg-white {
+  background: var(--color-white); }
+
+*.bg-beige {
+  background: var(--color-beige); }

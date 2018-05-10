@@ -1,0 +1,46 @@
+:root {
+
+  /*! = gap
+  -------------------------------------------------------------- */
+  --gap: 1.25rem;
+
+
+  /*! = typography
+  -------------------------------------------------------------- */
+  --font-regular:   300;
+  --font-semi-bold: 600;
+  --font-bold:      800;
+  --font-primary:   'Montserrat', sans-serif;
+
+
+  /*! = theme color
+  -------------------------------------------------------------- */
+  --color-orange:   #ce6669;
+  --color-yellow:   #eab55f;
+  --color-purple:   #8d5c9f;
+  --color-blue:     #47a2a8;
+  --color-green:    #44a061;
+  --color-grey:     #e6e6e6;
+  --color-beige:    #f3f0eb;
+
+  --color-primary:  #282828;
+  --color-secondary:#6ade93;
+  --color-white:    #fbfaf9;
+
+  /*! = break points
+  -------------------------------------------------------------- */
+  --app-width: minmax(auto, 6rem);
+
+}
+
+
+
+/*! = break points
+-------------------------------------------------------------- 
+* 10px		0.625rem
+**/
+@media (max-width: 600px) {
+  :root {
+    --gap: .625rem;
+  }
+}
