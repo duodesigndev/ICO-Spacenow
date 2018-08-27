@@ -1,18 +1,17 @@
 .loading-bar {
   border-radius: var(--gap);
-  background-color: var(--color-primary);
-  height: calc(var(--gap) * 1.5);
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 1px var(--color-secondary) inset;
+  height: calc(var(--gap) * 1);
   position: relative;
   widows: 100%; }
   .loading-bar:before {
     content: '';
     background-color: var(--color-secondary);
     border-radius: var(--gap);
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
     height: inherit;
     position: absolute;
-    width: 40%; }
+    width: 31%; }
 
 @media (max-width: 600px) {
   .loading-bar {

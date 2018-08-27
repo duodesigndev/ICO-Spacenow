@@ -1,11 +1,48 @@
 /*! = <nav>
 -------------------------------------------------------------- */
-nav ul {
+.navbar {
+  background-color: transparent;
   display: flex;
-  flex-flow: row;
-  justify-content: flex-end; }
-  nav ul li:not(:first-child) {
-    margin-left: var(--gap); }
+  padding: var(--gap) 0; }
+  .navbar #logo svg {
+    width: 210px; }
+  .navbar .navbar-toggler {
+    margin-top: -15px;
+    padding: .25rem .5rem;
+    width: 40px; }
+    .navbar .navbar-toggler .navbar-toggler-icon {
+      background-color: var(--color-secondary);
+      height: 2px;
+      position: relative;
+      width: 100%; }
+      .navbar .navbar-toggler .navbar-toggler-icon::before, .navbar .navbar-toggler .navbar-toggler-icon::after {
+        left: 0;
+        background-color: var(--color-secondary);
+        content: '';
+        height: 2px;
+        position: absolute;
+        width: 100%; }
+      .navbar .navbar-toggler .navbar-toggler-icon::before {
+        margin-top: -8px; }
+      .navbar .navbar-toggler .navbar-toggler-icon::after {
+        margin-top: 8px; }
+  .navbar .navbar-nav {
+    display: inherit;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center; }
+    .navbar .navbar-nav li:not(:last-child) {
+      margin-left: calc(var(--gap) / 1); }
+    .navbar .navbar-nav li:last-child {
+      margin-left: calc(var(--gap) / 2); }
+    .navbar .navbar-nav li a {
+      color: var(--color-menu);
+      font-size: var(--font-span); }
+      .navbar .navbar-nav li a:hover {
+        color: var(--color-menu-hover); }
 
 /*! = <nav class="main-menu">
 -------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .navbar .navbar-nav li:last-child {
+    margin-left: calc(var(--gap) / 1); } }

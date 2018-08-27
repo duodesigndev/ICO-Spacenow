@@ -24,7 +24,6 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	line-height: 150%;
   list-style: none;
 	vertical-align: baseline;
 }
@@ -44,8 +43,9 @@ footer,header,hgroup,menu,nav,section {
  * 1. Remove the underline in the links.
  */
 
- a {
-  text-decoration: none; /* 1 */
+a, a:hover {
+	cursor: pointer;
+	text-decoration: none; /* 1 */
 }
 
 /**

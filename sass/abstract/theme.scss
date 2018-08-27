@@ -1,52 +1,64 @@
-.wrapper {
-      display: grid;
-      grid-gap: var(--gap);
-      grid-template-columns: minmax(15px, auto) repeat(12, var(--app-width)) minmax(15px, auto);
-
-      > .inner {
-        display: grid;
-        grid-column: 2 / 14;
-        grid-gap: var(--gap);
-        grid-template-columns: repeat(12, 1fr);
-      }
+.svg-secondary {
+  fill: var(--color-secondary);
 }
 
-* {
+.svg-primary {
+  fill: var(--color-primary);
+}
 
-  &.bg-primary {
-    background: var(--color-primary);
-  }
-  
-  &.bg-secondary {
-    background: var(--color-secondary);
-  }
-  
-  &.bg-orange {
-    background: var(--color-orange);
-  }
-  
-  &.bg-yellow {
-    background: var(--color-yellow);
-  }
-  
-  &.bg-purple {
-    background: var(--color-purple);
-  }
-  
-  &.bg-blue {
-    background: var(--color-blue);
-  }
-  
-  &.bg-green {
-    background: var(--color-green);
-  }
+.section-dark {
+  background-color: var(--color-primary);
+}
 
-  &.bg-white {
-    background: var(--color-white);
-  }
+.section-py {
+  padding-top: calc(var(--gap) * 10);
+  padding-bottom: calc(var(--gap) * 10);
+}
 
-  &.bg-beige {
-    background: var(--color-beige);
-  }
+.section-pt {
+  padding-top: calc(var(--gap) * 10);
+}
 
+.section-pb {
+  padding-bottom: calc(var(--gap) * 10);
+}
+
+.border-red       { border-color: var(--color-red) !important; }
+.border-orange    { border-color: var(--color-orange) !important; }
+.border-yellow    { border-color: var(--color-yellow) !important; }
+.border-purple    { border-color: var(--color-purple) !important; }
+.border-blue      { border-color: var(--color-blue) !important; }
+.border-green     { border-color: var(--color-green) !important; }
+.border-primary   { border-color: var(--color-primary) !important; }
+.border-secondary { border-color: var(--color-secondary) !important; }
+
+@media (min-width: 1200px){
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/*! = <MEDIA*>
+-------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .section-py {
+    padding-top: calc(var(--gap) * 2);
+    padding-bottom: calc(var(--gap) * 2);
+  }
+  .section-pt {
+    padding-top: calc(var(--gap) * 2);
+  }
+  .section-pb {
+    padding-bottom: calc(var(--gap) * 2);
+  }
 }

@@ -2,45 +2,42 @@
 
   /*! = gap
   -------------------------------------------------------------- */
-  --gap: 1.25rem;
+  --gap: 30px;
 
 
   /*! = typography
   -------------------------------------------------------------- */
-  --font-regular:   300;
+  --font-light:     300;
+  --font-regular:   400;
   --font-semi-bold: 600;
-  --font-bold:      800;
+  --font-bold:      700;
   --font-primary:   'Montserrat', sans-serif;
+
+  --font-h1: 55px;
+  --font-h2: 45px;
+  --font-h3: 30px;
+  --font-h4: ;
+  --font-big: 18px;
+  --font-p: 16px;
+  --font-span: 14px;
+  --font-small: 12px;
 
 
   /*! = theme color
   -------------------------------------------------------------- */
+  --color-primary:  #282828;
+  --color-secondary:#6ade93;
+  --color-white:    #ffffff;
+
+  --color-red:      #ee767a;
   --color-orange:   #ce6669;
   --color-yellow:   #eab55f;
   --color-purple:   #8d5c9f;
   --color-blue:     #47a2a8;
   --color-green:    #44a061;
-  --color-grey:     #e6e6e6;
   --color-beige:    #f3f0eb;
 
-  --color-primary:  #282828;
-  --color-secondary:#6ade93;
-  --color-white:    #fbfaf9;
+  --color-menu:     #a6a6a6;
+  --color-menu-hover: var(--color-secondary);
 
-  /*! = break points
-  -------------------------------------------------------------- */
-  --app-width: minmax(auto, 6rem);
-
-}
-
-
-
-/*! = break points
--------------------------------------------------------------- 
-* 10px		0.625rem
-**/
-@media (max-width: 600px) {
-  :root {
-    --gap: .625rem;
-  }
 }

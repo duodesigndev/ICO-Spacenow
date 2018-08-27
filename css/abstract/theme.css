@@ -1,36 +1,57 @@
-.wrapper {
-  display: grid;
-  grid-gap: var(--gap);
-  grid-template-columns: minmax(15px, auto) repeat(12, var(--app-width)) minmax(15px, auto); }
-  .wrapper > .inner {
-    display: grid;
-    grid-column: 2 / 14;
-    grid-gap: var(--gap);
-    grid-template-columns: repeat(12, 1fr); }
+.svg-secondary {
+  fill: var(--color-secondary); }
 
-*.bg-primary {
-  background: var(--color-primary); }
+.svg-primary {
+  fill: var(--color-primary); }
 
-*.bg-secondary {
-  background: var(--color-secondary); }
+.section-dark {
+  background-color: var(--color-primary); }
 
-*.bg-orange {
-  background: var(--color-orange); }
+.section-py {
+  padding-top: calc(var(--gap) * 10);
+  padding-bottom: calc(var(--gap) * 10); }
 
-*.bg-yellow {
-  background: var(--color-yellow); }
+.section-pt {
+  padding-top: calc(var(--gap) * 10); }
 
-*.bg-purple {
-  background: var(--color-purple); }
+.section-pb {
+  padding-bottom: calc(var(--gap) * 10); }
 
-*.bg-blue {
-  background: var(--color-blue); }
+.border-red {
+  border-color: var(--color-red) !important; }
 
-*.bg-green {
-  background: var(--color-green); }
+.border-orange {
+  border-color: var(--color-orange) !important; }
 
-*.bg-white {
-  background: var(--color-white); }
+.border-yellow {
+  border-color: var(--color-yellow) !important; }
 
-*.bg-beige {
-  background: var(--color-beige); }
+.border-purple {
+  border-color: var(--color-purple) !important; }
+
+.border-blue {
+  border-color: var(--color-blue) !important; }
+
+.border-green {
+  border-color: var(--color-green) !important; }
+
+.border-primary {
+  border-color: var(--color-primary) !important; }
+
+.border-secondary {
+  border-color: var(--color-secondary) !important; }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px; } }
+
+/*! = <MEDIA*>
+-------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .section-py {
+    padding-top: calc(var(--gap) * 2);
+    padding-bottom: calc(var(--gap) * 2); }
+  .section-pt {
+    padding-top: calc(var(--gap) * 2); }
+  .section-pb {
+    padding-bottom: calc(var(--gap) * 2); } }
