@@ -1,3 +1,7 @@
+:root {
+  --video-padding: calc(var(--gap) * 20);
+  --whitepaper-height: calc(var(--gap) * 20); }
+
 .section-main {
   padding: calc(var(--gap) * 4) 0; }
   .section-main .container {
@@ -5,4 +9,63 @@
     grid-gap: calc(var(--gap) * 2); }
 
 .section-main-city {
-  margin-top: -200px; }
+  margin-top: calc(var(--gap) * -7); }
+
+.section-technology .tech-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--gap); }
+
+.section-why-spacenow {
+  padding-bottom: var(--video-padding); }
+
+.section-why-video {
+  margin-top: calc(var(--video-padding) * -.8); }
+  .section-why-video .video-overlay {
+    position: relative; }
+    .section-why-video .video-overlay:after {
+      content: '';
+      background: rgba(0, 0, 0, 0.2);
+      height: 100%;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%; }
+
+.section-token-sale {
+  margin-top: calc(var(--video-padding) * -.3); }
+  .section-token-sale .boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--gap); }
+
+.section-whitepaper-background {
+  background: url("../../images/section-whitepaper-background/section-whitepaper-background.jpg") center no-repeat;
+  background-size: cover;
+  height: var(--whitepaper-height);
+  width: 100%; }
+
+.section-whitepaper {
+  margin-top: calc(var(--whitepaper-height) * -1.15); }
+  .section-whitepaper .whitepaper-frame {
+    background-color: var(--color-white);
+    border-radius: calc(var(--gap) / 6);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); }
+  .section-whitepaper .btns-whitepaper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--gap); }
+
+.section-distibuition {
+  margin-top: calc(var(--whitepaper-height) * -.15); }
+
+@media (max-width: 480px) {
+  .section-technology .tech-boxes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: calc(var(--gap) * 2); }
+  .section-token-sale .boxes {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: calc(var(--gap) * 2); }
+  .section-whitepaper .btns-whitepaper {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: calc(var(--gap) * 2); } }

@@ -12,7 +12,7 @@
   --font-h1: 55px;
   --font-h2: 45px;
   --font-h3: 30px;
-  --font-h4: ;
+  --font-h4: 20px;
   --font-big: 18px;
   --font-p: 16px;
   --font-span: 14px;
@@ -31,3 +31,15 @@
   --color-beige:    #f3f0eb;
   --color-menu:     #a6a6a6;
   --color-menu-hover: var(--color-secondary); }
+  @media (max-width: 768px) {
+    :root {
+      --gap: 20px;
+      --font-h1: 37px;
+      --font-h2: 33px;
+      --font-h3: 26px; } }
+  @media (max-width: 480px) {
+    :root {
+      --gap: 10px;
+      --font-h1: 40px;
+      --font-h2: 35px;
+      --font-h3: 20px; } }

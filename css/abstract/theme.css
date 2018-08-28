@@ -7,15 +7,70 @@
 .section-dark {
   background-color: var(--color-primary); }
 
+.section-p {
+  --p: 10;
+  padding: calc(var(--gap) * var(--p)) !important; }
+  .section-p.p-5 {
+    --p: 5; }
+  .section-p.p-4 {
+    --p: 4; }
+  .section-p.p-3 {
+    --p: 3; }
+  .section-p.p-2 {
+    --p: 2; }
+  .section-p.p-1 {
+    --p: 1; }
+  .section-p.p-0 {
+    --p: 0; }
+
 .section-py {
-  padding-top: calc(var(--gap) * 10);
-  padding-bottom: calc(var(--gap) * 10); }
+  --py: 10;
+  padding-top: calc(var(--gap) * var(--py)) !important;
+  padding-bottom: calc(var(--gap) * var(--py)) !important; }
+  .section-py.py-5 {
+    --py: 5; }
+  .section-py.py-4 {
+    --py: 4; }
+  .section-py.py-3 {
+    --py: 3; }
+  .section-py.py-2 {
+    --py: 2; }
+  .section-py.py-1 {
+    --py: 1; }
+  .section-py.py-0 {
+    --py: 0; }
 
 .section-pt {
-  padding-top: calc(var(--gap) * 10); }
+  --pt: 10;
+  padding-top: calc(var(--gap) * var(--pt)) !important; }
+  .section-pt.pt-5 {
+    --pt: 5; }
+  .section-pt.pt-4 {
+    --pt: 4; }
+  .section-pt.pt-3 {
+    --pt: 3; }
+  .section-pt.pt-2 {
+    --pt: 2; }
+  .section-pt.pt-1 {
+    --pt: 1; }
+  .section-pt.pt-0 {
+    --pt: 0; }
 
 .section-pb {
-  padding-bottom: calc(var(--gap) * 10); }
+  --pb: 10;
+  padding-bottom: calc(var(--gap) * var(--pb)) !important; }
+  .section-pb.pb-5 {
+    --pb: 5; }
+  .section-pb.pb-4 {
+    --pb: 4; }
+  .section-pb.pb-3 {
+    --pb: 3; }
+  .section-pb.pb-2 {
+    --pb: 2; }
+  .section-pb.pb-1 {
+    --pb: 1; }
+  .section-pb.pb-0 {
+    --pb: 0; }
 
 .border-red {
   border-color: var(--color-red) !important; }
@@ -40,6 +95,36 @@
 
 .border-secondary {
   border-color: var(--color-secondary) !important; }
+
+.bg-primary {
+  background-color: var(--color-primary); }
+
+.bg-secondary {
+  background-color: var(--color-secondary) !important; }
+
+.bg-white {
+  background-color: var(--color-white); }
+
+.bg-red {
+  background-color: var(--color-red); }
+
+.bg-orange {
+  background-color: var(--color-orange); }
+
+.bg-yellow {
+  background-color: var(--color-yellow); }
+
+.bg-purple {
+  background-color: var(--color-purple); }
+
+.bg-blue {
+  background-color: var(--color-blue); }
+
+.bg-green {
+  background-color: var(--color-green); }
+
+.bg-beige {
+  background-color: var(--color-beige); }
 
 @media (min-width: 1200px) {
   .container {

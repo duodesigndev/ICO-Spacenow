@@ -29,3 +29,11 @@
       color: var(--color-white); }
   .btn.btn-subscribe {
     font-size: 16pt; }
+
+@media (max-width: 480px) {
+  .btn {
+    border-radius: calc(var(--gap) * 3);
+    font-size: var(--font-big);
+    padding: calc(var(--gap) / 1) calc(var(--gap) * 2.5); }
+    .btn.btn-subscribe {
+      font-size: 16px; } }

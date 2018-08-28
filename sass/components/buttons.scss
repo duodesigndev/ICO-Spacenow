@@ -41,3 +41,25 @@
   }
 
 }
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .btn {
+    border-radius: calc(var(--gap) * 3);
+    font-size: var(--font-big);
+    padding: calc(var(--gap) / 1) calc(var(--gap) * 2.5);
+  
+    &.btn-subscribe {
+      font-size: 16px;
+    }
+  
+  }
+}
