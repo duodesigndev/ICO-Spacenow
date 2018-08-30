@@ -37,6 +37,12 @@
   --py: 10;
   padding-top: calc(var(--gap) * var(--py)) !important;
   padding-bottom: calc(var(--gap) * var(--py)) !important;
+  &.py-7 {
+    --py: 7;
+  }
+  &.py-6 {
+    --py: 6;
+  }
   &.py-5 {
     --py: 5;
   }
@@ -123,6 +129,42 @@
 .bg-green         { background-color: var(--color-green); }
 .bg-beige         { background-color: var(--color-beige); }
 
+.border-primary       { border-color: var(--color-primary); }
+.border-secondary     { border-color: var(--color-secondary) !important; }
+.border-white         { border-color: var(--color-white); }
+.border-red           { border-color: var(--color-red); }
+.border-orange        { border-color: var(--color-orange); }
+.border-yellow        { border-color: var(--color-yellow); }
+.border-purple        { border-color: var(--color-purple); }
+.border-blue          { border-color: var(--color-blue); }
+.border-green         { border-color: var(--color-green); }
+.border-beige         { border-color: var(--color-beige); }
+
+
+.hexagon {
+  fill: currentColor;
+  .outline {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+svg:not(.logo) {
+  --svg-size: 1;
+  width: calc(var(--gap) * var(--svg-size));
+  max-width: calc(var(--gap) * var(--svg-size));
+  &.xxs { --svg-size: .5 }
+  &.xs { --svg-size: 1 }
+  &.s { --svg-size: 2 }
+  &.xxm { --svg-size: 3 }
+  &.xm { --svg-size: 4 }
+  &.m { --svg-size: 5 }
+  &.xxl { --svg-size: 6 }
+  &.xl { --svg-size: 7 }
+  &.l { --svg-size: 8 }
+}
+
 @media (min-width: 1200px){
   .container {
     max-width: 1200px;
@@ -152,4 +194,22 @@
   .section-pb {
     padding-bottom: calc(var(--gap) * 2);
   }
+
+  svg:not(.logo) {
+    --svg-size: 1;
+    width: calc(var(--gap) * var(--svg-size));
+    max-width: calc(var(--gap) * var(--svg-size));
+    &.xxs { --svg-size: 2 }
+    &.xs { --svg-size: 4 }
+    &.s { --svg-size: 6 }
+    &.xxm { --svg-size: 8 }
+    &.xm { --svg-size: 10 }
+    &.m { --svg-size: 12 }
+    &.xxl { --svg-size: 14 }
+    &.xl { --svg-size: 16 }
+    &.l { --svg-size: 18 }
+  }
+
+
+
 }
