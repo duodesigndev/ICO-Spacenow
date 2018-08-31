@@ -236,7 +236,8 @@ section {
     grid-gap: calc(var(--gap) * 2); }
   .section-whitepaper .btns-whitepaper {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: calc(var(--gap) * 2); }
+    grid-gap: calc(var(--gap) * 2);
+    justify-items: center; }
   .section-distibuition .distribuitions-graphs {
     grid-template-columns: repeat(2, 1fr); }
   .section-distibuition .allocations-graphs {

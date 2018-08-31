@@ -343,6 +343,7 @@ section {
     .btns-whitepaper {
       grid-template-columns: repeat(1, 1fr);
       grid-gap: calc(var(--gap) * 2);
+      justify-items: center;
     }
   }
 
