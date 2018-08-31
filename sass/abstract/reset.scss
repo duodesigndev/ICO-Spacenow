@@ -1,9 +1,10 @@
-html {
-  box-sizing: border-box;
+html, body {
+	overflow-x: hidden;
+	width: 100%;
 }
 
-body {
-	overflow-x: hidden;
+html {
+	box-sizing: border-box;
 }
 
 html, body, div, span, applet, object, iframe,
