@@ -3,6 +3,8 @@
   --whitepaper-height: calc(var(--gap) * 20); }
 
 section {
+  max-width: 100%;
+  overflow: hidden;
   z-index: 2; }
   section * {
     z-index: 3; }
