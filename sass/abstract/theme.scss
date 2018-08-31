@@ -34,7 +34,7 @@
 }
 
 .section-py {
-  --py: 8;
+  --py: 5;
   padding-top: calc(var(--gap) * var(--py)) !important;
   padding-bottom: calc(var(--gap) * var(--py)) !important;
   &.py-7 {
