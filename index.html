@@ -20,6 +20,17 @@
     <link rel="stylesheet" href="./css/layout/nav.css">
     <link rel="stylesheet" href="./css/layout/header.css">
     <link rel="stylesheet" href="./css/pages/home.css">
+
+    <!-- Third Part Library -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//fastcdn.org/ScrollMagic/2.0.5/minified/plugins/animation.gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <!-- END Third Part Library -->
+
     <script defer src="./index.js" ></script>
 
 </head>
@@ -27,6 +38,7 @@
 
     <!-- Navbar Container -->
     <div class="container">
+
         <!-- Nav -->
         <nav class="navbar navbar-expand-lg sticky-top">
             <!-- Logo -->
@@ -131,7 +143,8 @@
     <!-- End Navbar Container -->
 
     <!-- Main Section -->
-    <section class="section-main">
+    <section class="section-main" id="section-main">        
+
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -170,6 +183,7 @@
                 </div>
             </div>
         </div>
+
     </section>
     <!-- End Header Section -->
     
@@ -185,6 +199,15 @@
 
     <!-- Section about -->
     <section class="section-about section-dark section-py">
+        
+        <div id="triggerAbout" style="position: absolute;"></div>
+
+        <svg class="icon xm parallax-icon" id="animate" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon outline" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
+        <svg class="icon xs parallax-icon" id="animate2" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
+        <svg class="icon llll parallax-icon" id="animate3" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon outline" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+       
         <div class="container">
             <div class="row">
                 <div class="col-md-5 col-xs-12 d-flex align-items-center justify-content-center">
@@ -204,7 +227,7 @@
     <!-- End Section About -->
 
     <!-- Section The Problem -->
-    <section class="section-the-problem section-py">
+    <section class="section-the-problem section-py bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 col-xs-12">
@@ -216,8 +239,8 @@
                 </div>
                 <div class="col-md-7 col-xs-12 d-flex align-items-center justify-content-center">
                     <picture>
-                        <source srcset="./images/section-about/c-store.png" type="image/png">
-                        <img src="./images/section-about/c-store.png" class="img-fluid float-left">
+                        <source srcset="./images/section-the-problem/infograph.svg" type="image/svg">
+                        <img src="./images/section-the-problem/infograph.svg" width="500">
                     </picture>
                 </div>
             </div>
@@ -227,6 +250,15 @@
 
     <!-- Section The Solution -->
     <section class="section-the-solution section-dark section-py">
+
+        <div id="triggerSolution" style="position: absolute;"></div>
+
+        <svg class="icon m parallax-icon" id="animate-s1" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon outline" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
+        <svg class="icon s parallax-icon" id="animate-s2" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
+        <svg class="icon lll parallax-icon" id="animate-s3" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon outline" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xs-12">
@@ -235,7 +267,7 @@
                     
                     <div class="row">
                         <div class="col-md-6 col-xs-12">
-                            <p class="font-white">t’s a world- rst platform that instantly connects and empowers our two target audiences worldwide: hosts with spaces to lease or sublease; and guests or businesses looking for  exible working space. All hosts are able to monetize and manage their own space. And guests have control over how long they want to stay and the type of space they’re looking for.</p>
+                            <p class="font-white">It’s a world- rst platform that instantly connects and empowers our two target audiences worldwide: hosts with spaces to lease or sublease; and guests or businesses looking for  exible working space. All hosts are able to monetize and manage their own space. And guests have control over how long they want to stay and the type of space they’re looking for.</p>
                         </div>
                         <div class="col-md-6 col-xs-12">
                             <p class="font-white">The open-ended opportunities facilitated by the platform drive innovation and new opportunities and revenue streams globally.If someone has a space, no matter how small or large, they will be able to activate it.</p>
@@ -261,6 +293,17 @@
 
     <!-- Section Technology -->
     <section class="section-technology section-py text-md-center">
+
+        <div id="triggerTechnology" style="position: absolute;"></div>
+
+        <svg class="icon m parallax-icon" id="animate-t1" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon outline" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
+        <svg class="icon s parallax-icon" id="animate-t2" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
+        <svg class="icon ll parallax-icon"  id="animate-t3" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-grey)"><path class="hexagon" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
+        <svg class="icon s parallax-icon" id="animate-t4" data-name="Hexagon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" style="color: var(--color-secondary)"><path class="hexagon" d="M14.14,45.93v58.14a10.52,10.52,0,0,0,5.25,9.1l50.36,29.07a10.48,10.48,0,0,0,10.5,0l50.36-29.07a10.52,10.52,0,0,0,5.25-9.1V45.93a10.52,10.52,0,0,0-5.25-9.1L80.25,7.76a10.48,10.48,0,0,0-10.5,0L19.39,36.83A10.52,10.52,0,0,0,14.14,45.93Z"/></svg>
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xs-12">
@@ -354,32 +397,32 @@
                 <div class="col-md-10 col-xs-12 offset-md-1">
                     <div class="boxes">
                         <div class="box p-5">
-                            <p class="font-big font-secondary font-bold">Dates</p>
+                            <p class="font-big font-bold">Dates</p>
                             <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
                             <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-secondary font-bold">Dates</p>
+                            <p class="font-big font-bold">Dates</p>
                             <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
                             <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-secondary font-bold">Dates</p>
+                            <p class="font-big font-bold">Dates</p>
                             <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
                             <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-secondary font-bold">Dates</p>
+                            <p class="font-big font-bold">Dates</p>
                             <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
                             <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-secondary font-bold">Dates</p>
+                            <p class="font-big font-bold">Dates</p>
                             <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
                             <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-secondary font-bold">Dates</p>
+                            <p class="font-big font-bold">Dates</p>
                             <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
                             <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
                         </div>
@@ -1010,9 +1053,79 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+
+    $(() => {
+
+        // init controller
+        var controllerAbout = new ScrollMagic.Controller();
+
+        // build tween
+        var tweenAbout = new TimelineMax ()
+            .add([
+                TweenMax.fromTo("#animate", 1, { transform: "translate(1800%, 750%)" }, { transform: "translate(1800%, 450%)" }),
+                TweenMax.fromTo("#animate2", 1, { transform: "translate(2500%, -100%)" }, { transform: "translate(2500%, 100%)" }),
+                TweenMax.fromTo("#animate3", 1, { transform: "translate(50%, -35%)" }, { transform: "translate(50%, -33%)" })
+            ]);
+
+        // Scene About
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#triggerAbout",
+            duration: $(window).height() * 2,
+            offset: -800
+        })
+        .setTween(tweenAbout)
+        .addTo(controllerAbout)
+        //.addIndicators()
+        .setPin("#triggerAbout");
+
+
+        // init controller
+        var controllerSolution = new ScrollMagic.Controller();
+
+        // build tween
+        var tweenSolution = new TimelineMax ()
+            .add([
+                TweenMax.fromTo("#animate-s1", 1, { transform: "translate(220%, 50%)" }, { transform: "translate(220%, -50%)" }),
+                TweenMax.fromTo("#animate-s2", 1, { transform: "translate(1500%, -100%)" }, { transform: "translate(1500%, -1000%)" }),
+                TweenMax.fromTo("#animate-s3", 1, { transform: "translate(300%, -50%)" }, { transform: "translate(300%, 0%)" })
+            ]);
+        // Scene Solution
+        var sceneSolution = new ScrollMagic.Scene({
+            triggerElement: "#triggerSolution",
+            duration: $(window).height() * 2,
+            offset: -800
+        })
+        .setTween(tweenSolution)
+        .addTo(controllerSolution)
+        //.addIndicators()
+        .setPin("#triggerSolution");
+
+
+        // init controller
+        var controllerTechnology = new ScrollMagic.Controller();
+
+        // build tween
+        var tweenTechnology = new TimelineMax ()
+            .add([
+                TweenMax.fromTo("#animate-t1", 1, { transform: "translate(220%, 50%)" }, { transform: "translate(220%, -50%)" }),
+                TweenMax.fromTo("#animate-t2", 1, { transform: "translate(1500%, -100%)" }, { transform: "translate(1500%, -1000%)" }),
+                TweenMax.fromTo("#animate-t3", 1, { transform: "translate(-320%, -50%)" }, { transform: "translate(-320%, 0%)" }),
+                TweenMax.fromTo("#animate-t4", 1, { transform: "translate(-320%, 1800%)" }, { transform: "translate(-320%, 1400%)" })
+            ]);
+        // Scene Technology
+        var sceneTechnology = new ScrollMagic.Scene({
+            triggerElement: "#triggerTechnology",
+            duration: $(window).height() * 2,
+            offset: -800
+        })
+        .setTween(tweenTechnology)
+        .addTo(controllerTechnology)
+        //.addIndicators()
+        .setPin("#triggerTechnology");
+
+    });
+    </script>
 
 </body>
 </html>

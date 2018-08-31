@@ -2,6 +2,11 @@
   --video-padding: calc(var(--gap) * 20);
   --whitepaper-height: calc(var(--gap) * 20); }
 
+section {
+  z-index: 2; }
+  section * {
+    z-index: 3; }
+
 .section-main {
   padding: calc(var(--gap) * 4) 0; }
   .section-main .container {
@@ -10,6 +15,9 @@
 
 .section-main-city {
   margin-top: calc(var(--gap) * -7); }
+
+.section-about {
+  position: relative; }
 
 .section-technology .tech-boxes {
   display: grid;
@@ -23,14 +31,16 @@
   margin-top: calc(var(--video-padding) * -.8); }
   .section-why-video .video-overlay {
     position: relative; }
-    .section-why-video .video-overlay:after {
+    .section-why-video .video-overlay::after {
       content: '';
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.2) url("../../images/icons/play.svg") center no-repeat;
+      background-size: calc(var(--gap) * 5);
       height: 100%;
       pointer-events: none;
       position: absolute;
       top: 0;
-      width: 100%; }
+      width: 100%;
+      z-index: 4; }
 
 .section-token-sale {
   margin-top: calc(var(--video-padding) * -.3); }
@@ -267,6 +277,36 @@
       .section-subscribe-ovni .ovni .ufo-laser {
         margin-left: calc(var(--gap) * -4.5);
         width: 50%; } }
+
+.scene > *:nth-child(1) {
+  opacity: 0.15; }
+  .scene > *:nth-child(1) button {
+    transform: rotate(150deg); }
+
+.scene > *:nth-child(2) {
+  opacity: 0.3; }
+  .scene > *:nth-child(2) button {
+    transform: rotate(120deg); }
+
+.scene > *:nth-child(3) {
+  opacity: 0.45; }
+  .scene > *:nth-child(3) button {
+    transform: rotate(90deg); }
+
+.scene > *:nth-child(4) {
+  opacity: 0.6; }
+  .scene > *:nth-child(4) button {
+    transform: rotate(60deg); }
+
+.scene > *:nth-child(5) {
+  opacity: 0.75; }
+  .scene > *:nth-child(5) button {
+    transform: rotate(30deg); }
+
+.scene > *:nth-child(6) {
+  opacity: 0.9; }
+  .scene > *:nth-child(6) button {
+    transform: rotate(0deg); }
 
 @keyframes upDown {
   0% {

@@ -24,7 +24,7 @@
     --p: 0; }
 
 .section-py {
-  --py: 10;
+  --py: 8;
   padding-top: calc(var(--gap) * var(--py)) !important;
   padding-bottom: calc(var(--gap) * var(--py)) !important; }
   .section-py.py-7 {
@@ -160,9 +160,12 @@
 .border-beige {
   border-color: var(--color-beige); }
 
+.parallax-icon {
+  position: absolute; }
+
 .hexagon {
   fill: currentColor; }
-  .hexagon .outline {
+  .hexagon.outline {
     fill: none;
     stroke: currentColor;
     stroke-linecap: round;
@@ -179,17 +182,41 @@ svg:not(.logo) {
   svg:not(.logo).s {
     --svg-size: 2 ; }
   svg:not(.logo).xxm {
-    --svg-size: 3 ; }
+    --svg-size: 3; }
+    svg:not(.logo).xxm path {
+      stroke-width: 1; }
   svg:not(.logo).xm {
-    --svg-size: 4 ; }
+    --svg-size: 4; }
+    svg:not(.logo).xm path {
+      stroke-width: .9; }
   svg:not(.logo).m {
-    --svg-size: 5 ; }
+    --svg-size: 5; }
+    svg:not(.logo).m path {
+      stroke-width: .8; }
   svg:not(.logo).xxl {
-    --svg-size: 6 ; }
+    --svg-size: 6; }
+    svg:not(.logo).xxl path {
+      stroke-width: .7; }
   svg:not(.logo).xl {
-    --svg-size: 7 ; }
+    --svg-size: 7; }
+    svg:not(.logo).xl path {
+      stroke-width: .6; }
   svg:not(.logo).l {
-    --svg-size: 8 ; }
+    --svg-size: 8; }
+    svg:not(.logo).l path {
+      stroke-width: .5; }
+  svg:not(.logo).ll {
+    --svg-size: 15; }
+    svg:not(.logo).ll path {
+      stroke-width: .4; }
+  svg:not(.logo).lll {
+    --svg-size: 25; }
+    svg:not(.logo).lll path {
+      stroke-width: .3; }
+  svg:not(.logo).llll {
+    --svg-size: 50; }
+    svg:not(.logo).llll path {
+      stroke-width: .2; }
 
 @media (min-width: 1200px) {
   .container {
