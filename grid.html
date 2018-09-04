@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  @import url('https://fonts.googleapis.com/css?family=Oswald:200,400');
+
+  body {
+    display: grid;
+    font-family: Oswald;
+  }
+
+  :root {
+      --green: green; 
+      --red: rgba(215, 20, 20, 0.88); 
+      --blue: #2637a7; 
+      --yellow: #f3b80a;
+      --ocre: #AC861D;
+      --orange: #FC7735;
+      --purple: purple;
+
+      --gap: 30px;
+      --width: 1170px;
+      --row-start: 1;
+      --row-count: 1;
+  }
+
+  .green  { color: var(--green) !important; }
+  .red    { color: var(--red) !important; }
+  .blue   { color: var(--blue) !important; }
+  .yellow { color: var(--yellow) !important; }
+  .ocre   { color: var(--ocre) !important; }
+  .orange { color: var(--orange) !important; }
+  .purple { color: var(--purple) !important; }
+
+  .date, .time{
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .time {
+    font-size: 16px;
+  }
+
+  .date {
+    text-transform: uppercase;
+  }
+
+  .tag {
+    font-size: 12px;
+    font-weight: 200;
+  }
+
+  .title > a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+  }
+
+  .venues-grid {
+    display: grid;
+    grid-gap: calc(var(--gap) / 4);
+    grid-template-columns: repeat(5, minmax(calc(var(--width) / 5), 1fr));
+    font-weight: 400;
+    font-size: 18px;
+    justify-items: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: 1fr;
+    width: var(--width);
+    justify-self: center;
+  }
+
+  .date-grid {
+    display: grid;
+    grid-gap: calc(var(--gap) / 2);
+  }
+  
+  .date-grid .films {
+    border: 1px solid #000;
+    display: grid;
+    grid-gap: calc(var(--gap) / 4);
+    grid-template-columns: repeat(5, minmax(calc(var(--width) / 5), 1fr));
+    padding: calc(var(--gap) / 4);
+  }
+
+  .date-grid:nth-child(2) .films .film-venue .film:first-child .title,
+  .date-grid:last-child .films .film-venue .film:last-child .title {
+    position: relative;
+  }
+
+  .date-grid:nth-child(2) .films .film-venue .film:first-child .title::before,
+  .date-grid:last-child .films .film-venue .film:last-child .title::before {
+    content: 'Opening Night';
+    position: absolute;
+    font-size: 13px;
+    font-weight: 200;
+    top: -20px;
+    left: 0;
+    width: max-content;
+  }
+  
+  .date-grid:last-child .films .film-venue .film:last-child .title::before {
+    content: 'Closing Night';
+  }
+
+  .date-grid .films .film-venue {
+    display: grid;
+    position: relative;
+  }
+
+  .date-grid .films .film-venue:not(:last-child)::after {
+    background-color: #000;
+    content: '';
+    height: calc(var(--gap) / 2 + 100%);
+    right: calc(var(--gap) / -8);
+    position: absolute;
+    top: calc(var(--gap) / -4);
+    width: 1px;
+  }
+
+  .date-grid:not(:first-child) .films .film-venue {
+    grid-template-rows: repeat(var(--row-count), minmax(calc(var(--gap) * 2), max-content));
+    grid-gap: calc(var(--gap) / 4);
+  }
+
+  .date-grid .films .film-venue .film {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: calc(var(--gap) / 4); 
+    grid-row-start: var(--row-start);
+    align-items: center;
+  }
+
+  .date-grid .films .film-venue .film:not(:first-child) {
+    border-top: dashed 1px #000;
+    padding-top: calc(var(--gap) / 3);
+  }
+
+  </style>
+</head>
+<body>
+  <div class="grid" style="max-width: var(--width);">
+    <div class="venues-grid">
+      <div class="venue">CHAUVEL 1</div>
+      <div class="venue">CHAUVEL 2</div>
+      <div class="venue">VERONA CINEMA</div>
+      <div class="venue">DENDY NEWTOWN</div>
+      <div class="venue">MCA</div>
+    </div>
+
+    <div class="date-grid">
+        <div class="date">TUE 9TH OCT</div>
+        <div class="films">
+          <div class="film-venue">
+            <div class="film">
+              <div class="time">7pm</div>
+              <div class="title"><a class="red" href="#"> Putin's Witnesses</a></div>
+            </div>
+          </div>
+          <div class="film-venue"><div class="film"></div></div>
+          <div class="film-venue"><div class="film"></div></div>
+          <div class="film-venue"><div class="film"></div></div>
+          <div class="film-venue"><div class="film"></div></div>
+        </div>
+    </div>
+    <div class="date-grid" style="--row-count: 2;">
+      <div class="date">WED 10TH OCT</div>
+      <div class="films">
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">7pm</div>
+            <div class="title"><a class="green" href="#">The Scribe + Q&A</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">7:15pm</div>
+            <div class="title"><a class="yellow" href="#">My Father Is My Mother’s Brother</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">7:30pm</div>
+            <div class="title"><a class="yellow" href="#">A Woman Captured</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2"></div>
+        </div>
+        <div class="film-venue">
+          <div class="film">
+            <div class="time">10am - 4:30pm</div>
+            <div class="title"><a class="purple" href="#">Doc Talk</a></div>
+          </div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">7pm</div>
+            <div class="title"><a class="orange" href="#">Milford Graves Full Mantis</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="date-grid" style="--row-count: 2;">
+      <div class="date">THU 11TH OCT</div>
+      <div class="films">
+        <div class="film-venue">
+          <div class="film">
+              <div class="time">6:30pm</div>
+              <div class="title"><a class="green" href="#">Happy Sad Man + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">8:30pm</div>
+            <div class="title"><a class="yellow" href="#">Samouni Road + Q&A</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film">
+            <div class="time">6:45pm</div>
+            <div class="title"><a class="yellow" href="#">Infinite Football</a></div>
+          </div>
+          <div class="film" style="--row-start: 2"></div>
+        </div>
+        <div class="film-venue">
+          <div class="film">
+            <div class="time">6:30pm</div>
+            <div class="title"><a class="blue" href="#">Blowin' Up</a></div>
+          </div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">8:30pm</div>
+            <div class="title"><a class="blue" href="#">People's Republic of Desire</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2"></div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="date-grid">
+      <div class="date">FRI 12TH OCT</div>
+      <div class="films">
+        <div class="film-venue">
+          <div class="film">
+              <div class="time">7pm</div>
+              <div class="title"><a class="blue" href="#">United Skates</a></div>
+          </div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">9pm</div>
+            <div class="title"><a class="yellow" href="#">Island of The Hungry Ghosts + Q&A</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2"></div>
+        </div>
+        <div class="film-venue">
+          <div class="film">
+            <div class="time">6:30pm</div>
+            <div class="title"><a class="yellow" href="#">America</a></div>
+          </div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">9pm</div>
+            <div class="title"><a class="blue" href="#">The White World According to Daliborek</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film">
+            <div class="time">7pm</div>
+            <div class="title"><a class="yellow" href="#">Happy Winter + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">9pm</div>
+            <div class="title"><a class="blue" href="#">Our New President</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="date-grid" style="--row-count: 6;">
+      <div class="date">SAT 13TH OCT</div>
+      <div class="films">
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">12pm</div>
+            <div class="title"><a class="green" href="#">On The Rocks + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 3">
+            <div class="time">2pm</div>
+            <div class="title"><a class="blue" href="#">Minding The Gap</a></div>
+          </div>
+          <div class="film" style="--row-start: 4">
+            <div class="time">4pm</div>
+            <div class="title"><a class="yellow" href="#">The Proposal + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 5">
+            <div class="time">6:30pm</div>
+            <div class="title"><a class="blue" href="#">AQUARELA + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 6">
+            <div class="time">8:30pm</div>
+            <div class="title"><a class="yellow" href="#">The Raft</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2"></div>
+          <div class="film" style="--row-start: 3"></div>
+          <div class="film" style="--row-start: 4"></div>
+          <div class="film" style="--row-start: 5"></div>
+          <div class="film" style="--row-start: 6"></div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">12:30pm</div>
+            <div class="title"><a class="" href="#">Chulas Fronteras</a></div>
+          </div>
+          <div class="film" style="--row-start: 3">
+            <div class="time">2:15pm</div>
+            <div class="title"><a class="blue" href="#">Bruce Lee & the Outlaw</a></div>
+          </div>
+          <div class="film" style="--row-start: 4">
+            <div class="time">4:15pm</div>
+            <div class="title"><a class="blue" href="#">Yours in Sisterhood</a></div>
+          </div>
+          <div class="film" style="--row-start: 5">
+            <div class="time">6:45pm</div>
+            <div class="title"><a class="yellow" href="#">For The Birds</a></div>
+          </div>
+          <div class="film" style="--row-start: 6">
+            <div class="time">8:30pm</div>
+            <div class="title"><a class="yellow" href="#">Obscuro Barroco</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">12pm</div>
+            <div class="title"><a class="blue" href="#">Caniba</a></div>
+          </div>
+          <div class="film" style="--row-start: 3">
+            <div class="time">2pm</div>
+            <div class="title"><a class="green" href="#">Two Wolves + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 4">
+            <div class="time">4:15pm</div>
+            <div class="title"><a class="yellow" href="#">América</a></div>
+          </div>
+          <div class="film" style="--row-start: 5">
+            <div class="time">6pm</div>
+            <div class="title"><a class="orange" href="#">The Price of Everything</a></div>
+          </div>
+          <div class="film" style="--row-start: 6">
+            <div class="time">8pm</div>
+            <div class="title"><a class="yellow" href="#">My Father Is My Mother’s Brother</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+            <div class="film">
+              <div class="time">11am</div>
+              <div class="title"><a class="" href="#">Masterclass</a></div>
+            </div>
+            <div class="film" style="--row-start: 2">
+              <div class="time">12:30pm</div>
+              <div class="title"><a class="" href="#">Under the Sun + Q&A</a></div>
+            </div>
+            <div class="film" style="--row-start: 3">
+              <div class="time">3pm</div>
+              <div class="title"><a class="orange" href="#">The Eyes of Orson Welles</a></div>
+            </div>
+            <div class="film" style="--row-start: 4"></div>
+            <div class="film" style="--row-start: 5"></div>
+            <div class="film" style="--row-start: 6"></div>
+          </div>
+      </div>
+    </div>
+    <div class="date-grid" style="--row-count: 5;">
+      <div class="date">SUN 14TH OCT</div>
+      <div class="films">
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">1pm</div>
+            <div class="title"><a class="blue" href="#">What is Democracy?</a></div>
+          </div>
+          <div class="film" style="--row-start: 3">
+            <div class="time">3:30pm</div>
+            <div class="title"><a class="yellow" href="#">The Silence of Others</a></div>
+          </div>
+          <div class="film" style="--row-start: 4">
+            <div class="time">5:30pm</div>
+            <div class="title"><a class="blue" href="#">La Flor De La Vida</a></div>
+          </div>
+          <div class="film" style="--row-start: 5">
+            <div class="time">7:30pm</div>
+            <div class="title"><a class="red" href="#">The Gospel of Eureka</a></div>
+          </div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2"></div>
+          <div class="film" style="--row-start: 3"></div>
+          <div class="film" style="--row-start: 4"></div>
+          <div class="film" style="--row-start: 5"></div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">12:30pm</div>
+            <div class="title"><a class="ocre" href="#">Australian Shorts Competition</a></div>
+          </div>
+          <div class="film" style="--row-start: 3">
+            <div class="time">3pm</div>
+            <div class="title"><a class="green" href="#">Undermined: Tales from The Kimberley + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 4">
+            <div class="time">4:15pm</div>
+            <div class="title"><a class="yellow" href="#">Happy Winter + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 5"></div>
+        </div>
+        <div class="film-venue">
+          <div class="film"></div>
+          <div class="film" style="--row-start: 2">
+            <div class="time">1pm</div>
+            <div class="title"><a class="blue" href="#">Yours in Sisterhood</a></div>
+          </div>
+          <div class="film" style="--row-start: 3">
+            <div class="time">3pm</div>
+            <div class="title"><a class="yellow" href="#">Samouni Road + Q&A</a></div>
+          </div>
+          <div class="film" style="--row-start: 4">
+            <div class="time">5:30pm</div>
+            <div class="title"><a class="yellow" href="#">For The Bird</a></div>
+          </div>
+          <div class="film" style="--row-start: 5"></div>
+        </div>
+        <div class="film-venue">
+            <div class="film">
+              <div class="time">11am</div>
+              <div class="title"><a class="" href="#">Gagarin's Pioneers + Q&A</a></div>
+            </div>
+            <div class="film" style="--row-start: 2">
+              <div class="time">1:30pm</div>
+              <div class="title"><a class="red" href="#">Putin's Witnesses + Q&A</a></div>
+            </div>
+            <div class="film" style="--row-start: 3">
+              <div class="time">3:30pm</div>
+              <div class="title"><a class="orange" href="#">The End of Fear</a></div>
+            </div>
+            <div class="film" style="--row-start: 4"></div>
+            <div class="film" style="--row-start: 5"></div>
+          </div>
+      </div>
+    </div>
+     
+  </div>
+</body>
+</html>
