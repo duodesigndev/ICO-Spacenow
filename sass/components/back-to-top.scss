@@ -1,0 +1,10 @@
+.back-to-top {
+  bottom: calc(50% - 20px);
+  font-size: 12px;
+  height: 20px;
+  right: 20px;
+  position: fixed;
+  width: 20px;
+  z-index: 999999;
+  opacity: 0;
+}

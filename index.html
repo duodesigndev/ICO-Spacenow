@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./css/components/cards.css">
     <link rel="stylesheet" href="./css/components/figure.css">
     <link rel="stylesheet" href="./css/components/loading-bar.css">
+    <link rel="stylesheet" href="./css/components/back-to-top.css">
     <link rel="stylesheet" href="./css/layout/nav.css">
     <link rel="stylesheet" href="./css/layout/header.css">
     <link rel="stylesheet" href="./css/pages/home.css">
@@ -58,7 +59,11 @@
     <script defer src="./index.js" ></script>
 
 </head>
-<body>
+<body id="spacenowtoken">
+
+    <a id="arrow-back-to-top" href="#spacenowtoken" class="back-to-top">
+        <svg version="1.1" id="top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve" ><path class="svg-secondary" d="M222.138,91.475l-89.6-89.6c-2.5-2.5-6.551-2.5-9.051,0l-89.6,89.6c-2.5,2.5-2.5,6.551,0,9.051s6.744,2.5,9.244,0L122,21.85  V249.6c0,3.535,2.466,6.4,6,6.4s6-2.865,6-6.4V21.85l78.881,78.676c1.25,1.25,2.992,1.875,4.629,1.875s3.326-0.625,4.576-1.875  C224.586,98.025,224.638,93.975,222.138,91.475z"/></svg>
+    </a>
 
     <!-- Navbar Container -->
     <div class="container">
@@ -1152,6 +1157,19 @@
 
     });
     </script>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+                document.getElementById("arrow-back-to-top").style.opacity = "1";
+            } else {
+                document.getElementById("arrow-back-to-top").style.opacity = "0";
+            }
+        }
+        </script>
 
 </body>
 </html>
