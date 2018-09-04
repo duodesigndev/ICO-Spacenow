@@ -32,10 +32,18 @@ function show(elements) {
     }
 }
 
+function hide(elements) {
+    elements = elements.length ? elements : [elements];
+    for (var index = 0; index < elements.length; index++) {
+    elements[index].style.display = 'none';
+    }
+}
+
 var results = getParameterByName('return');
 
 if (results) {
 
     show(document.getElementById('message'));
+    hide(documnet.getElementById('mc-embedded-subscribe-form'));
 
 }
