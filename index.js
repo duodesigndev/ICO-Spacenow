@@ -45,5 +45,6 @@ if (results) {
 
     show(document.getElementById('message'));
     hide(documnet.getElementById('mc-embedded-subscribe-form'));
+    document.getElementById('message').scrollIntoView();
 
 }
