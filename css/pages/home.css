@@ -100,7 +100,8 @@ section {
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         border-radius: calc(var(--gap) / 6); }
         .section-distibuition .distribuitions-graphs .graph:hover .back-graph {
-          opacity: var(--back-opacity); }
+          opacity: var(--back-opacity);
+          z-index: 2; }
   .section-distibuition .allocations-graphs {
     display: grid;
     grid-template-columns: repeat(6, 1fr); }
