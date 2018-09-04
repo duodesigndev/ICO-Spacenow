@@ -44,7 +44,7 @@ var results = getParameterByName('return');
 if (results) {
 
     show(document.getElementById('message'));
-    hide(documnet.getElementById('mc-embedded-subscribe-form'));
-    document.getElementById('message').scrollIntoView();
+    hide(document.getElementById('mc-embedded-subscribe-form'));
+    document.getElementById('footer').scrollIntoView();
 
 }
