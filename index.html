@@ -42,7 +42,7 @@
     <meta property="og:type"               content="website" />
     <meta property="og:title"              content="Spacenow Token" />
     <meta property="og:description"        content="Decentralised short term space activation." />
-    <meta property="og:image"              content="/images/ico/favicon-256.png" />
+    <meta property="og:image"              content="/images/ico/favicon-white-256.png" />
     <meta property="og:site_name"          content="ICO Spacenow Token" />
     <!-- END FACBOOK SHARING METADATA -->
 
@@ -162,8 +162,10 @@
                     <li><a class="font-semi-bold" href="#roadmap">Roadmap</a></li>
                     <li><a class="font-semi-bold" href="#team">Team</a></li>
                     <li><a class="font-semi-bold" href="#contact">Contact</a></li>
-                    <li><a href="javascript: void()"><img src="./images/icons/b-menu.png" alt=""></a>
-                        <a href="javascript: void()"><img src="./images/icons/airplane-menu.png" alt=""></a></li>
+                    <li>
+                        <!-- <a href="javascript: void()"><img src="./images/icons/b-menu.png" alt=""></a> -->
+                        <a href="https://t.me/spacenowtoken" target="_blank"><img src="./images/icons/airplane-menu.png" alt=""></a>
+                    </li>
                 </div>
             </div>
             <!-- End Main Menu -->
@@ -184,11 +186,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 col-md-4 offset-md-2">
+                <!-- <div class="col-6 col-md-4">
                     <button class="btn btn-primary float-right">Buy tokens</button>
-                </div>
-                <div class="col-6 col-md-4">
-                    <button class="btn btn-outline">Whitepaper</button>
+                </div> -->
+                <div class="col-12 col-md-12 text-center">
+                    <a href="#whitepaper"><button class="btn btn-outline" >Whitepaper</button></a>
                 </div>
             </div>
             <div class="row">
@@ -396,8 +398,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xs-12">
-                    <div class="embed-responsive embed-responsive-16by9 video-overlay">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VzMipyySfKw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="embed-responsive embed-responsive-16by9 video-overlay" id="video-container">
+                        <iframe id="video-iframe" class="embed-responsive-item" src="https://www.youtube.com/embed/VzMipyySfKw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -432,29 +434,31 @@
                             <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-bold">Dates</p>
-                            <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
-                            <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
+                            <p class="font-big font-bold">Token supply</p>
+                            <p>NOW Supply: <b class="font-bold">4,000,000,000</b></p>
+                            <p>Tokens for sale: <b class="font-bold">2,600,000,000</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-bold">Dates</p>
-                            <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
-                            <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
+                            <p class="font-big font-bold">Token info</p>
+                            <p>Token: <b class="font-bold">NOW</b></p>
+                            <p>Platform: <b class="font-bold">Ethereum</b></p>
+                            <p>Type: <b class="font-bold">ERC20</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-bold">Dates</p>
-                            <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
-                            <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
+                            <p class="font-big font-bold">Investment Min. investment</p>
+                            <p>Pre-ITO: <b class="font-bold">50 ETH</b></p>
+                            <p>ITO: <b class="font-bold">0.2 ETH</b></p>
+                            <p>Accepting: <b class="font-bold">ETH</b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-bold">Dates</p>
-                            <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
-                            <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
+                            <p class="font-big font-bold">Token price</p>
+                            <p>Presale Price: <b class="font-bold">NOW = 0.006</b></p>
+                            <p><b></b></p>
                         </div>
                         <div class="box p-5">
-                            <p class="font-big font-bold">Dates</p>
-                            <p>Presale Start: <b class="font-bold">Q3 2018</b></p>
-                            <p>Public Sale End: <b class="font-bold">30th Nov 2018</b></p>
+                            <p class="font-big font-bold">Soft cap / Hard cap</p>
+                            <p>Soft cap: <b class="font-bold">2,100,000 USD</b></p>
+                            <p>Hard cap: <b class="font-bold">22,360,000 USD</b></p>
                         </div>
                     </div>
                     <div class="row">
@@ -494,11 +498,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 col-xs-12">
-                            <div class="btns-whitepaper">
-                                <button class="btn btn-primary">NOW Token Terms & Conditions</button>
-                                <button class="btn btn-outline">Download Whitepaper</button>
-                            </div>
+                        <div class="col-6 col-md-6">
+                            <button class="btn btn-primary btn-block">Terms & Conditions</button>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <a href="/pdfs/Whitepaper_v1.5.pdf" download>
+                                <button class="btn btn-outline btn-block">Download Whitepaper</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -539,11 +545,11 @@
                                     <h3 class="progress-value font-bold font-secondary">65%</h3>
                                 </div>
                             </div>
-                            <div class="back-graph">
+                            <!-- <div class="back-graph">
                                 <h4 class="font-semi-bold font-secondary title">ITO</h4>
                                 <span class="font-bold subtitle">Lorem ipsum dolor sit amet!</span>
                                 <span class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa exercitationem voluptas voluptates natus minima.</span>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="graph">
                             <div class="front-graph">
@@ -558,11 +564,11 @@
                                     <h3 class="progress-value font-bold font-blue">25%</h3>
                                 </div>
                             </div>
-                            <div class="back-graph">
+                            <!-- <div class="back-graph">
                                 <h4 class="font-semi-bold font-blue title">Company Reserve</h4>
                                 <span class="font-bold subtitle">Lorem ipsum dolor sit amet!</span>
                                 <span class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa exercitationem voluptas voluptates natus minima.</span>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="graph">
                             <div class="front-graph">
@@ -577,11 +583,11 @@
                                     <h3 class="progress-value font-bold font-purple">5%</h3>
                                 </div>
                             </div>
-                            <div class="back-graph">
+                            <!-- <div class="back-graph">
                                 <h4 class="font-semi-bold font-purple title">Advisors</h4>
                                 <span class="font-bold subtitle">Lorem ipsum dolor sit amet!</span>
                                 <span class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa exercitationem voluptas voluptates natus minima.</span>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="graph">
                             <div class="front-graph">
@@ -596,11 +602,11 @@
                                     <h3 class="progress-value font-bold font-yellow">5%</h3>
                                 </div>
                             </div>
-                            <div class="back-graph">
+                            <!-- <div class="back-graph">
                                 <h4 class="font-semi-bold font-yellow title">Bounty</h4>
                                 <span class="font-bold subtitle">Lorem ipsum dolor sit amet!</span>
                                 <span class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa exercitationem voluptas voluptates natus minima.</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -807,123 +813,291 @@
             <div class="row my-5">
                 <div class="col-12">
                     <div class="team text-center">
-                        <div class="member">
-                            <img src="./images/section-our-team/daniel.png" alt="" srcset="">
-                            <p class="font-semi-bold">Danieal Gunning</p>
+                        <div class="member">                             
+                            <div class="member-grid">
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/daniel.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/daniel-gunning-9759b4a/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
+                            <p class="font-semi-bold">Daniel Gunning</p>
                             <p>CMO</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/barrett.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/barrett.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/barrett-ovens-610a8534/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Barrett Ovens</p>
                             <p>CTO</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/nick.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/nick.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/nick-leary-184130154/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Nick Leary</p>
                             <p>CCO</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/baydr.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/baydr.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/baydr-strik-94530826/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Baydr Strik</p>
                             <p>CFO</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/oliver.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/oliver.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/olivier-adolphe-86769520/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Oliver Adolphe</p>
                             <p>COO</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/elias.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/elias.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/eliashelou/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Elias Helou</p>
                             <p>CRO</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/fiona.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/fiona.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/fionajmacdonald/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Fiona MacDonald</p>
                             <p>Communications Advisor</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/sara.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/sara.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/sarasahely/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Sara Sahely</p>
                             <p>CMO</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/rich.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/rich.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/rich-long-businessconsultant/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Rich Long</p>
                             <p>Head of Product & Strategy</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/lucas.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/lucas.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/lucasnascimentoanalyst/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Lucas Nascimento</p>
                             <p>Lead Frontend</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/wellington.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/wellington.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/wviveiro/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Wellington Viveiro</p>
                             <p>Lead Backend</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/anil.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/anil.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/mr-anil-prajapati/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Anil Prajapati</p>
                             <p>Software Engineer</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/paul.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/paul.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/pauldifrancesco/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Paul Di Francesco</p>
                             <p>Digital Director</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/camila.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/camila.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/camila-concha-778aa1109" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Camila Concha</p>
                             <p>Senior Frontend</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/leo.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/leo.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/leochui/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Leo Chui</p>
                             <p>Lead Business Analyst</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/guerreiro.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/guerreiro.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/guilherme-guerreiro-27b30626/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Guilherme Guerreiro</p>
                             <p>Business Analyst</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/gui.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/gui.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/gui-abbate-181ab7a6" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Gui Abbate</p>
                             <p>Creative Manager</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/plinio.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/plinio.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/plinioniitz/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Plinio Nitzsche</p>
                             <p>Illustrator/Graphic Designer</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/chris.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/chris.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/adolphe/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Chris Adolphe</p>
                             <p>Product Manager</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/jay.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/jay.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/jay-lyon-2a3717154/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Jay Lion</p>
                             <p>Creative Strategy</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/diego.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/diego.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/diego-passoni-559392124/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Diego Passoni</p>
                             <p>Graphic Designer</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/mollie.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/mollie.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/mollie-steggall-1a7321137/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Mollie Steggall</p>
                             <p>Graphic Designer</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/blayne.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/blayne.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/blayne-r-34080065/" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Blayne Reilly</p>
                             <p>Account Director</p>
                         </div>
-                        <div class="member">
-                            <img src="./images/section-our-team/frances.png" alt="" srcset="">
+                        <div class="member">                             
+                            <div class="member-grid">                                 
+                                <div class="member-image">
+                                    <img src="./images/section-our-team/frances.png" alt="" srcset="">
+                                </div>
+                                <a href="https://www.linkedin.com/in/frances-magiera-95464bba" target="_blank" class="linkedin">
+                                    <img alt="" src="./images/icons/linkedin.svg" />
+                                </a>
+                            </div>
                             <p class="font-semi-bold">Frances Magiera</p>
                             <p>Social Manager</p>
                         </div>
@@ -1060,7 +1234,7 @@
                         <!-- Main Menu -->
                         <div class="navbar-collapse">
                             <div class="navbar-nav">
-                                <li><a class="font-semi-bold" href="javascript: void(0);">FAQ</a></li>
+                                <!-- <li><a class="font-semi-bold" href="javascript: void(0);">FAQ</a></li> -->
                                 <li><a class="font-semi-bold" href="javascript: void(0);">Privacy Policy</a></li>
                                 <li><a class="font-semi-bold" href="javascript: void(0);">Terms and Conditions</a></li>
                                 <li><a class="font-semi-bold" href="javascript: void(0);">Disclosure Statement</a></li>
@@ -1072,9 +1246,9 @@
             </div>
             <div class="row mt-5">
                 <div class="col-12">
-                    <p class="font-small">All official email communications in regard to Spacenow and Spacenow Token will only come from <a href="javascript: void(0);" class="font-secondary">support@spacenowtoken.com</a></p>
-                    <p class="font-small">We take the privacy of our clients, partners, and interested parties in our project very seriously.</p>
-                    <p class="font-small">Any emails received from a different account should be regarded as an attempt at fraud and should be treated as such.</p>
+                    <p class="font-small">All official email communications in regard to Spacenow and Spacenow Token will only come from <a href="javascript: void(0);" class="font-secondary">support@spacenowtoken.com</a>. 
+                    We take the privacy of our clients, partners, and interested parties in our project very seriously.
+                    Any emails received from a different account should be regarded as an attempt at fraud and should be treated as such.</p>
                     <p class="mt-3 font-small">If you have received an email from someone claiming to represent Spacenow that is not contacting you from the above address: </p>
                     <p class="font-small">1. Do not click on any links contained within the email</p>
                     <p class="font-small">2. Send a copy of the email to “support@spacenowtoken.com”</p>
@@ -1169,6 +1343,14 @@
                 document.getElementById("arrow-back-to-top").style.opacity = "0";
             }
         } 
-        </script>
+    </script>
+    <!-- TODO: REMOVE PLAY BUTTON AFTER CLICKING THE VIDEO
+        <script>
+        var element = document.getElementById("video-iframe");
+        element.addEventListener("click", function() {
+            var element = document.getElementById("video-container");
+            element.classList.remove("video-overlay");
+        });
+    </script> -->
 </body>
 </html>

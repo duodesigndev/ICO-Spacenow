@@ -5,7 +5,6 @@
   color: initial;
   position: relative;
   width: 100%;
-  height: max-content;
   border-radius: 5px;
   box-shadow: 0 0 0 1px inset var(--color-secondary);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -51,4 +50,12 @@
 
 .box:hover::after {
     opacity: 1;
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+  .box {
+    p {
+      font-size: 14px;
+    }
+  }
 }

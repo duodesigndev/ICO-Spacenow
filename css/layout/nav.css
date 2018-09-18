@@ -33,8 +33,6 @@
     align-items: center; }
     .navbar .navbar-nav li {
       margin-left: calc(var(--gap) / 1); }
-      .navbar .navbar-nav li:last-child a {
-        margin-left: calc(var(--gap) / 2); }
       .navbar .navbar-nav li a {
         color: var(--color-menu);
         font-size: var(--font-span); }
