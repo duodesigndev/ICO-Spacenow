@@ -22,7 +22,7 @@ section {
 
 .section-technology .tech-boxes {
   display: grid;
-  grid-template-columns: repeat(4, 23%);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: var(--gap); }
 
 .section-why-spacenow {
@@ -176,6 +176,16 @@ section {
       margin-bottom: calc(var(--gap) * .5);
       object-fit: cover;
       width: 100%; }
+    .section-our-team .team .member::after {
+      background: var(--color-secondary) url(../../images/icons/linkedin.svg) center no-repeat;
+      border-radius: 50%;
+      content: '';
+      height: 20px;
+      padding: calc(var(--gap) * .6);
+      position: absolute;
+      width: 20px;
+      top: calc(50% + 30px);
+      right: 15px; }
 
 .section-subscribe form .input {
   border: none;
@@ -217,22 +227,9 @@ section {
       width: calc(var(--gap) * 4);
       animation: 3s ease-in-out zoomOutIn infinite; }
 
-@media (max-width: 768px) {
-  .section-technology .tech-boxes .font-big {
-    font-size: var(--font-span); }
-  .distribuitions-graphs {
-    margin-bottom: 0 !important; }
-  .front-graph > .title {
-    font-size: var(--font-span); }
-  .section-our-team .team {
-    grid-template-columns: repeat(3, 27%); }
-  .section-subscribe form .btn {
-    margin-top: -50px;
-    margin-right: 0; } }
-
 @media (max-width: 480px) {
   .section-technology .tech-boxes {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: calc(var(--gap) * 2); }
   .section-token-sale .boxes {
     grid-template-columns: repeat(1, 1fr);
@@ -282,12 +279,7 @@ section {
       width: 50%; }
       .section-subscribe-ovni .ovni .ufo-laser {
         margin-left: calc(var(--gap) * -4.5);
-        width: 50%; }
-  .section-technology .tech-boxes .font-big {
-    font-size: var(--font-big);
-    text-align: center; }
-  .front-graph > .title {
-    font-size: var(--font-h4); } }
+        width: 50%; } }
 
 .scene > *:nth-child(1) {
   opacity: 0.15; }
@@ -342,25 +334,3 @@ section {
     transform: scale(0.7); }
   100% {
     transform: scale(1); } }
-
-.member-grid {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center; }
-
-.member-image {
-  grid-row: 1 / 4;
-  grid-column: 1 / 4;
-  overflow: hidden;
-  border-radius: 112; }
-
-.linkedin {
-  grid-row: 3 / 4;
-  grid-column: 3 / 4;
-  z-index: 10;
-  background-color: #6ade93;
-  border-radius: 24px;
-  height: 40px;
-  width: 40px; }

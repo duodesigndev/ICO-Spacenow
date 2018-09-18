@@ -11,7 +11,8 @@
   transition: all ease-in-out .2s;
   user-select: none;
   vertical-align: middle;
-  white-space: nowrap; }
+  white-space: nowrap;
+  width: max-content; }
   .btn.btn-primary {
     background-color: var(--color-secondary);
     color: var(--color-white); }
@@ -28,10 +29,6 @@
       color: var(--color-white); }
   .btn.btn-subscribe {
     font-size: 16pt; }
-
-@media (max-width: 768px) {
-  .btn {
-    font-size: 15pt; } }
 
 @media (max-width: 480px) {
   .btn {
